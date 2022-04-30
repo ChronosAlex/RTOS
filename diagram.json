@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -157.39,
+      "left": 56.85,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -107.62,
+      "left": 236.86,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 223.82, "left": 217.02, "attrs": {} }
+  ],
+  "connections": [
+    [ "mega:5", "btn1:2.r", "green", [ "v0" ] ],
+    [ "mega:6", "btn2:2.r", "green", [ "v0" ] ],
+    [ "mega:GND.1", "btn1:1.l", "black", [ "v0" ] ],
+    [ "mega:GND.1", "btn2:1.l", "black", [ "v0" ] ],
+    [ "mega:GND.3", "pot1:GND", "black", [ "v0" ] ],
+    [ "mega:5V", "pot1:VCC", "red", [ "v0" ] ],
+    [ "mega:A0", "pot1:SIG", "green", [ "v0" ] ]
+  ]
+}
