@@ -117,7 +117,7 @@ void Task_AT(void *pvParameters) // tache 5
   while(1)
   {
     xQueueReceive(ASQueue,&capteur,0);// on reçoit la donnée de la ASQueue
-    capteurbis = {capteur.analogique,capteur.numerique,capteur.tempsEnMillisecondes/60000};
+    capteurbis = {capteur.analogique,capteur.numerique,capteur.tempsEnMillisecondes/60000}; //1000*60 donnant une minute
     if ( xSemaphoreTake( xSerialSemaphore, ( TickType_t ) 5 ) == pdTRUE )//utilise le port série pour afficher le contenu de la queue ASQueue
     {
       Serial.print("Nouvelle structure : ");
