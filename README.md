@@ -1,4 +1,7 @@
 # RTOS
+
+ROUSSEAU Alex Ing 2 Instrumentation
+
 arduino exo
 
 Nous avions plusieurs tâches à effectuer, récupérer les valeurs d'un potentiomètre analogique et de deux boutons numériques puis les envoyer dans des queues. 
